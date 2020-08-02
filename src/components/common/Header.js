@@ -42,7 +42,7 @@ const UserInfo = styled.div`
   margin-right: 1rem;
 `;
 
-const Header = ({ user }) => {
+const Header = ({ user, onLogout }) => {
   return (
     <>
       <HeaderBlock>
@@ -52,8 +52,8 @@ const Header = ({ user }) => {
           </Link>
           {user ? (
             <div className="right">
-              <UserInfo>{user.username}</UserInfo>
-              <Button>로그아웃</Button>
+              <UserInfo>{user.name}</UserInfo>
+              <Button onClick={onLogout}>로그아웃</Button>
             </div>
           ) : (
             <div className="right">

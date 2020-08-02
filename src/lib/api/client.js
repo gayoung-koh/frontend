@@ -2,6 +2,7 @@ import axios from "axios";
 
 const client = axios.create();
 
+client.defaults.headers.common['Content-Type'] = 'application/json';
 /* 글로벌 설정 예시;
 
     // API 주소를 다른 곳으로 사용함
